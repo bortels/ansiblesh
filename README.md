@@ -24,12 +24,12 @@ docker build -t ansiblesh .
 
 5) test:
 
-# First, hit the old, system ansible:
-[tbortels@bsprd10utlge001 ~]$ /usr/bin/ansible --version
-ansible 1.6.2
-# Now try ansible in docker
-[tbortels@bsprd10utlge001 ~]$ ansible --version
-ansible 1.7.2
+    # First, hit the old, system ansible:
+    ~$ /usr/bin/ansible --version
+    ansible 1.6.2
+    # Now try ansible in docker
+    ~$ ansible --version
+    ansible 1.7.2
 
 Notes:
 
