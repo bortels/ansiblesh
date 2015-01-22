@@ -10,15 +10,15 @@ docker build -t ansiblesh .
 3) Create a ~/bin directory, and copy the "ansible" script there,
    creating symlinks to each of the ansible programs:
 
-mkdir ~/bin
-cp ansible ~/bin
-cd ~/bi
-chmod a+x ansible
-ln -s ansible ansible-doc
-ln -s ansible ansible-galaxy
-ln -s ansible ansible-playbook
-ln -s ansible ansible-pull
-ln -s ansible ansible-vault
+    mkdir ~/bin
+    cp ansible ~/bin
+    cd ~/bin
+    chmod a+x ansible
+    ln -s ansible ansible-doc
+    ln -s ansible ansible-galaxy
+    ln -s ansible ansible-playbook
+    ln -s ansible ansible-pull
+    ln -s ansible ansible-vault
 
 4) ensure that ~/bin is the first directory on your PATH.
 
