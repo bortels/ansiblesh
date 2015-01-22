@@ -1,0 +1,12 @@
+#!/bin/sh 
+
+export USER=`id -un`
+export GROUP=`id -gn`
+export EXTERNALUID=`id -u`
+export EXTERNALGID=`id -g`
+echo USER=$USER and EXERNALUID=$EXTERNALUID  and EXTERNALGID=$EXTERNALGID and GROUP=$GROUP
+docker run -e "USER=$USER" -e "GROUP=$GROUP" -e "EXTERNALUID=$EXTERNALUID" -e "EXTERNALGID=$EXTERNALGID" -h ansible-shell --rm -it \
+   -v /etc/ansible/hosts:/etc/ansible/hosts:ro \
+   -v /etc/ansible/host_vars:/etc/ansible/host_vars:ro \
+   -v /home/$USER:/home/$USER \
+ ansiblesh bash
